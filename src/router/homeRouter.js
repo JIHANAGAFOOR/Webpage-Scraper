@@ -4,7 +4,7 @@ const request = require("request")
 const websiteDb = require("../model/websiteNameModel")
 const homeRouter = express.Router()
 //------------router to add items
-homeRouter.post("/", (req, res) => {
+homeRouter.post("/add", (req, res) => {
     //---------get data from domain name----------
     request(req.body.add, function (error, response, html) {
         if (!error && response.statusCode == 200) {
